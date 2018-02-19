@@ -1,0 +1,25 @@
+{
+    "status":"0",
+    "result":[
+        {
+            "startPrice" : 0,
+            "endPrice" : 100
+        },
+        {
+            "startPrice" : 100,
+            "endPrice" : 500
+        },
+        {
+            "startPrice" : 500,
+            "endPrice" : 1000
+        },
+        {
+            "startPrice" : 0,
+            "endPrice" : 100
+        },
+        {
+            "startPrice" : 1000,
+            "endPrice" : 2000
+        }
+    ]
+}
