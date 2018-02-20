@@ -18,11 +18,14 @@ mongoose.connection.on("disconnected", function () {
   console.log("MongoDB connected disconnected.")
 });
 
-//查询商品列表数据
+//查询商品列表数据(分页功能实现)
 router.get("/list", function (req,res,next) {
+  // page是第几页
   let page = parseInt(req.param("page"));
+  // pagesize是每页多少条数据
   let pageSize = parseInt(req.param("pageSize"));
   let priceLevel = req.param("priceLevel");
+  // sort指明升序还是降序
   let sort = req.param("sort");
   let skip = (page-1)*pageSize;
   var priceGt = '',priceLte = '';

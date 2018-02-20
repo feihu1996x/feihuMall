@@ -86,7 +86,7 @@
         data(){
             return {
                 goodsList:[],
-                sortFlag:true,
+                sortFlag:true,// true表示升序
                 page:1,
                 pageSize:8,
                 busy:true,
