@@ -1,14 +1,14 @@
 {
   "name": "feihumall",
   "version": "1.0.0",
-  "description": "A mall system built with Vue. Js + Node.js +MongoDB",
-  "author": "feihu1996x <gsx0312@qq.com>",
+  "description": " A mall system built with Vue. Js + Node.js +MongoDB",
+  "author": "JackBean",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "dev": "node build/dev-server.js",
+    "start": "node build/dev-server.js",
     "build": "node build/build.js",
-    "server": "node server/bin/www"
+    "es6": "babel demo/user.js -o demo/user-com.js"
   },
   "dependencies": {
     "axios": "^0.16.1",
@@ -65,7 +65,7 @@
     "webpack-merge": "^4.1.0"
   },
   "engines": {
-    "node": ">= 6.0.0",
+    "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
   "browserslist": [

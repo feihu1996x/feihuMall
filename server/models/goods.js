@@ -1,5 +1,3 @@
-//  商品列表查询model
-
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema;
 
@@ -13,4 +11,3 @@ var produtSchema = new Schema({
 });
 
 module.exports = mongoose.model('Good',produtSchema);
-

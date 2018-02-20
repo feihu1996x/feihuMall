@@ -15,7 +15,7 @@ mongoose.connection.on("error", function () {
 });
 
 mongoose.connection.on("disconnected", function () {
-  console.log("MongoDB disconnected.")
+  console.log("MongoDB connected disconnected.")
 });
 
 //查询商品列表数据
