@@ -8,6 +8,8 @@ var produtSchema = new Schema({
   "checked":String,
   "productNum":Number,
   "productImage":String
+},{
+  usePushEach: true
 });
 
 module.exports = mongoose.model('Good',produtSchema);
