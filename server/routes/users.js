@@ -49,7 +49,7 @@ router.post("/login", function (req,res,next) {
 
 //登出接口
 router.post("/logout", function (req,res,next) {
-  res.cookie("userId","",{
+  res.cookie("userId","",{// 删除保存在客户端的cookie
     path:"/",
     maxAge:-1
   });
@@ -60,6 +60,7 @@ router.post("/logout", function (req,res,next) {
   })
 });
 
+// 登录校验接口
 router.get("/checkLogin", function (req,res,next) {
   if(req.cookies.userId){
       res.json({
@@ -75,6 +76,7 @@ router.get("/checkLogin", function (req,res,next) {
     });
   }
 });
+// 购物车商品数量查询接口
 router.get("/getCartCount", function (req,res,next) {
   if(req.cookies && req.cookies.userId){
     console.log("userId:"+req.cookies.userId);
@@ -105,6 +107,7 @@ router.get("/getCartCount", function (req,res,next) {
     });
   }
 });
+
 //查询当前用户的购物车数据
 router.get("/cartList", function (req,res,next) {
   var userId = req.cookies.userId;
@@ -127,13 +130,13 @@ router.get("/cartList", function (req,res,next) {
   });
 });
 
-//购物车删除
+//购物车删除接口
 router.post("/cartDel", function (req,res,next) {
   var userId = req.cookies.userId,productId = req.body.productId;
   User.update({
     userId:userId
   },{
-    $pull:{
+    $pull:{// 删除购物车中指定商品子文档
       'cartList':{
         'productId':productId
       }
@@ -155,13 +158,13 @@ router.post("/cartDel", function (req,res,next) {
   });
 });
 
-//修改商品数量
+//修改商品数量接口
 router.post("/cartEdit", function (req,res,next) {
   var userId = req.cookies.userId,
       productId = req.body.productId,
       productNum = req.body.productNum,
       checked = req.body.checked;
-  User.update({"userId":userId,"cartList.productId":productId},{
+  User.update({"userId":userId,"cartList.productId":productId},{// 更新子文档
     "cartList.$.productNum":productNum,
     "cartList.$.checked":checked,
   }, function (err,doc) {
@@ -199,7 +202,7 @@ router.post("/editCheckAll", function (req,res,next) {
             if(err1){
               res.json({
                 status:'1',
-                msg:err1,message,
+                msg:err1.message,
                 result:''
               });
             }else{

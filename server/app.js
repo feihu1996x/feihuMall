@@ -24,8 +24,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//  在处理任何请求之前，首先调用其中的函数，从而实现对请求的拦截
 app.use(function (req,res,next) {
-  if(req.cookies.userId){
+  if(req.cookies.userId){// 从请求中获取cookie,从而判断用户是否已经登录
     next();
   }else{
       console.log("url:"+req.originalUrl);

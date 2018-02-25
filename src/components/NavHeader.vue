@@ -167,7 +167,7 @@
           return this.$store.state.cartCount;
         }*/
         mounted(){
-            this.checkLogin();
+            this.checkLogin();// 登录校验请求
         },
         methods:{
             checkLogin(){

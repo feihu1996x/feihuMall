@@ -20,10 +20,10 @@ Vue.use(VueLazyload, {
   try: 3 // default 1
 })
 
-Vue.filter("currency",currency);
+Vue.filter("currency",currency);// 定义全局过滤器
 Vue.config.productionTip = false;
 
-const store = new Vuex.Store({
+const store = new Vuex.Store({// 使用vuex定义了一个全局状态管理器
   state: {
     nickName:'',
     cartCount:0

@@ -181,8 +181,8 @@
         mounted(){
             this.init();
         },
-        filters:{
-          currency:currency
+        filters:{// 定义局部过滤器
+          currency:currency// 货币格式化
         },
         computed:{
           checkAllFlag(){
