@@ -41,6 +41,12 @@ router.post("/login", function (req,res,next) {
                       userName:doc.userName
                   }
               });
+          } else {
+            res.json({
+              status:'1',
+              msg:'用户名或密码错误',
+              result:''
+            });
           }
       }
   });
