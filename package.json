@@ -2,7 +2,7 @@
   "name": "feihumall",
   "version": "1.0.0",
   "description": " A mall system built with Vue. Js + Node.js +MongoDB",
-  "author": "JackBean",
+  "author": "feihu1996",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
