@@ -211,6 +211,8 @@
                     if(res.status=="0"){
 //                        this.nickName = '';
                         this.$store.commit("updateUserInfo",res.result.userName);
+                        // 清空购物车
+                        this.$store.commit('updateCartCount', -(this.$store.state.cartCount));
                     }
                 })
             },
