@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var Goods = require('../models/goods');
 
 //连接MongoDB数据库
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://127.0.0.1:27017/feihuMall');
 
 mongoose.connection.on("connected", function () {
@@ -21,12 +22,12 @@ mongoose.connection.on("disconnected", function () {
 //查询商品列表数据(分页功能实现)
 router.get("/list", function (req,res,next) {
   // page是第几页
-  let page = parseInt(req.param("page"));
+  let page = parseInt(req.query.page);
   // pagesize是每页多少条数据
-  let pageSize = parseInt(req.param("pageSize"));
-  let priceLevel = req.param("priceLevel");
+  let pageSize = parseInt(req.query.pageSize);
+  let priceLevel = req.query.priceLevel;
   // sort指明升序还是降序
-  let sort = req.param("sort");
+  let sort = req.query.sort;
   let skip = (page-1)*pageSize;
   var priceGt = '',priceLte = '';
   let params = {};
