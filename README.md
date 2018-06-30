@@ -1,6 +1,6 @@
 # feihumall
 
-> A mall system built with Vue. Js + Node.js +MongoDB
+> A mall system built with Vue. js + Node.js + MongoDB
 
 ## Build Setup
 
