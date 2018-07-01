@@ -20,7 +20,7 @@ npm run build --report
 # launch the server
 npm run server
 ```
-# Website(demo)
+## Website(demo)
 
 [feihuMall](http://dev.feihu1996.cn 'feihuMall')
 
