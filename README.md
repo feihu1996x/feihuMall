@@ -20,5 +20,8 @@ npm run build --report
 # launch the server
 npm run server
 ```
+# Website(demo)
+
+[feihuMall](http://dev.feihu1996.cn 'feihuMall')
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
