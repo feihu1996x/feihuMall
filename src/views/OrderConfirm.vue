@@ -125,11 +125,13 @@
       </div>
     </div>
     <nav-footer></nav-footer>
+    <fork-me></fork-me>
   </div>
 </template>
 <script>
   import NavHeader from './../components/NavHeader'
   import NavFooter from './../components/NavFooter'
+  import ForkMe from './../components/ForkMe'
   import NavBread from './../components/NavBread'
   import {currency} from './../util/currency'
   import axios from 'axios'
@@ -150,7 +152,8 @@
       components:{
         NavHeader,
         NavFooter,
-        NavBread
+        NavBread,
+        ForkMe
       },
       filters:{
         currency:currency

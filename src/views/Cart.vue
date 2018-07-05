@@ -137,6 +137,7 @@
       </div>
     </Modal>
     <nav-footer></nav-footer>
+    <fork-me></fork-me>
   </div>
 </template>
 <style>
@@ -168,6 +169,7 @@
     import NavFooter from './../components/NavFooter'
     import NavBread from './../components/NavBread'
     import Modal from './../components/Modal'
+    import ForkMe from './../components/ForkMe'
     import {currency} from './../util/currency'
     import axios from 'axios'
     export default{
@@ -209,7 +211,8 @@
           NavHeader,
           NavFooter,
           NavBread,
-          Modal
+          Modal,
+          ForkMe
         },
         methods:{
             init(){

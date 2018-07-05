@@ -74,6 +74,7 @@
       </modal>
       <div class="md-overlay" v-show="overLayFlag" @click.stop="closePop"></div>
       <nav-footer></nav-footer>
+      <fork-me></fork-me>
     </div>
 </template>
 <script>
@@ -81,6 +82,7 @@
     import NavFooter from './../components/NavFooter'
     import NavBread from './../components/NavBread'
     import Modal from './../components/Modal'
+    import ForkMe from './../components/ForkMe'
     import axios from 'axios'
     export default{
         data(){
@@ -123,7 +125,8 @@
           NavHeader,
           NavFooter,
           NavBread,
-          Modal
+          Modal,
+          ForkMe
         },
         methods:{
             getGoodsList(flag){
